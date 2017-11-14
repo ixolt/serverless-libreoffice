@@ -6,7 +6,8 @@ sudo yum install git autoconf ccache nasm libffi-devel libmpc-devel mpfr-devel \
 	gmp-devel libicu-devel icu python34-devel google-crosextra-caladea-fonts \
 	google-crosextra-carlito-fonts liberation-serif-fonts liberation-sans-fonts \
 	mesa-libGL-devel mesa-libGLU-devel libX11-devel libXext-devel libICE-devel \
-	libSM-devel libXrender-devel libxslt-devel gperf fontconfig-devel libpng-devel libxslt-devel -y
+	libSM-devel libXrender-devel libxslt-devel gperf fontconfig-devel libpng-devel libxslt-devel \
+	expat-devel curl-devel nss-devel nspr-devel openssl-devel -y
 sudo yum groupinstall "Development Tools" -y
 
 # clone libreoffice sources
@@ -53,4 +54,4 @@ echo "hello world" > a.txt
 	--nolockcheck --nologo --norestore --convert-to pdf --outdir $(pwd) a.txt
 
 # download from EC2 to local machine
-scp ec2-user@ec2-54-227-212-139.compute-1.amazonaws.com:/home/ec2-user/libreoffice/lo.tar.gz $(pwd)
+scp ec2-user@you-instance-ip:/home/ec2-user/libreoffice/lo.tar.gz $(pwd)
